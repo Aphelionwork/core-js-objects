@@ -253,7 +253,7 @@ function fromJSON(/* proto, json */) {
  *    ]
  */
 function sortCitiesArray(arr) {
-  arr.sort(function (x1, x2) {
+  arr.sort(function helper(x1, x2) {
     if (x1.country < x2.country) return -1;
     if (x1.country > x2.country) return 1;
     // при равных score сортируем по time
